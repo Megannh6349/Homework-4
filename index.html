@@ -2,41 +2,47 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description" content="Enter your description here" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Code Quiz</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Coding Quiz</title>
+
+    <link rel="stylesheet" href="./assets/css/styles.css" />
 </head>
 
 <body>
-    <!-- this is the start screen -->
-    <div class="container-fluid">
-        <h1>Code Quiz</h1>
-        <p>Here's some questions about coding. I'm absolutely not qualified to be making this quiz, but here we
-            are. If you get it wrong, you lose like idk 5 seconds or something. If you get it right, you lose 0
-            seconds. Cool, right?</p>
-        <button>Start Quiz</button>
+    <div class="scores"><a href="highscores.html">View Highscores</a></div>
+
+    <div class="timer">Time: <span id="time">0</span></div>
+
+    <div class="wrapper">
+        <div id="start-screen" class="start">
+            <h1> Quiz Challenge</h1>
+            <p>
+                Tell me as much as you know about coding!
+            </p>
+            <button id="start">Coding Quiz - Push to Start<br>By Megan and Carlos</button>
+        </div>
+
+        <div id="questions" class="hide">
+            <h2 id="question-title"></h2>
+            <div id="choices" class="choices"></div>
+        </div>
+
+        <div id="end-screen" class="hide">
+            <h2>All done!</h2>
+            <p>Your final score is <span id="final-score"></span>.</p>
+            <p>
+                What are your initials?: <input type="text" id="initials" max="3" />
+                <button id="submit">Submit</button>
+            </p>
+        </div>
+
+        <div id="feedback" class="feedback hide"></div>
     </div>
 
-    <!-- this is the questions div that i'll have to append -->
-    <div></div>
-
-    <!-- this is the end screen -->
-    <div>
-        <h2>Finished!</h2>
-        <h5>(Finally, am I right?)</h5>
-        <p>Your final score is:
-            <!-- add that shit here -->
-        </p>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="./assets/js/questions.js"></script>
+    <script src="./assets/js/logic.js"></script>
 </body>
 
 </html>
